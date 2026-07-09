@@ -4,15 +4,15 @@ import com.library.repository.BookRepository;
 
 public class BookService {
 
-    private BookRepository repository;
+    private BookRepository bookRepository;
 
-    public void setRepository(BookRepository repository) {
-        this.repository = repository;
+    // Setter Injection
+    public void setBookRepository(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
     }
 
-    public void service() {
-        System.out.println("Book Service is working.");
-        repository.display();
+    public void issueBook() {
+        System.out.println("Book Service: Issuing Book...");
+        bookRepository.displayBook();
     }
-
 }
